@@ -1,5 +1,5 @@
 # MQL4-WebRequest
-A module for handling WebRequest functions comfortably with MQL4.
+A module for handling WebRequest function comfortably with MQL4.
 
 
 ## Requirement
