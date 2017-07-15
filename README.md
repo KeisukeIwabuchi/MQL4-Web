@@ -1,31 +1,29 @@
 # MQL4-WebRequest
-MQL4でWebRequest関数を楽に扱うためのモジュール
+A module for handling WebRequest functions comfortably with MQL4.
 
 
 ## Requirement
-- stdlib.ex4(MT4にデフォルトで付属のLibraryファイル)
+- stdlib.ex4(Defult Library file)
 
 
 ## Install
-1. Web.mqhをダウンロード
-2. データフォルダを開き、/MQL4/Includes/mql4_modules/Web/Web.mqhとして保存
+1. Download Web.mqh
+2. Save the file to /MQL4/Includes/mql4_modules/Web/Web.mqh
 
 
 ## Usage
-Web.mqhをincludeで読み込んで使用する。
-GETでアクセスしたい場合はgetメソッドを呼び出す。
+Include the Web.mqh.
+If you want to access HTTP by GET, call get method.
 ``` cpp
-Web::get("アクセスしたいサイトのURL", 結果を受け取るstring型の変数);
+Web::get("URL", Variable of receive the result);
 ```
 
-POSTでアクセスしたい場合はpostメソッドを呼び出す。
+If you want to access HTTP by POST, call post method.
 ``` cpp
-Web::post("アクセスしたいサイトのURL", 結果を受け取るstring型の変数);
+Web::post("URL", Variable of receive the result);
 ```
 
-パラメータを付けてリクエストしたい場合は、事前にaddPrameterメソッドでパラメータをセットする。
+If you want to request with a parameter, set the parameter with the addPrameter method beforehand.
 ``` cpp
 Web::addParameter(key, value);
 ```
-
-※MQL4-WebではWebRequest関数を使用しているので、事前にMT4のオプションから許可するURLリストにアクセスしたいサイトのURLを登録しておく必要があります。
